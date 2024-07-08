@@ -171,7 +171,7 @@ function Inputs({ units, setUnits, setQuery }) {
                             ))}
                         </ul>
                     )}
-                </div> 
+                </div>
             </div>
             <div className='flex flex-row w-1/4 items-center justify-center'>
                 <button name='metric' className='text-xl text-white font-light transition ease-out hover:scale-125' onClick={handleUnitsChange}>°C</button>
