@@ -94,7 +94,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { UilSearch, UilLocationPoint } from './UilIcons';
-import getCitySuggestions from '../services/SuggestionService';
+import getCitySuggestions from '../services/WeatherService';
 
 function Inputs({ units, setUnits, setQuery }) {
     const [city, setCity] = useState('');
@@ -156,8 +156,8 @@ function Inputs({ units, setUnits, setQuery }) {
                     size={25}
                     className='text-white cursor-pointer transition ease-out hover:scale-125'
                     onClick={handleLocationClick}
-                />
-                <div>
+                 />
+               <div>
                     {suggestions.length > 0 && (
                         <ul className='absolute top-12 w-full bg-white text-black shadow-lg'>
                             {suggestions.map((suggestion, index) => (
@@ -171,7 +171,7 @@ function Inputs({ units, setUnits, setQuery }) {
                             ))}
                         </ul>
                     )}
-                </div>
+                </div> 
             </div>
             <div className='flex flex-row w-1/4 items-center justify-center'>
                 <button name='metric' className='text-xl text-white font-light transition ease-out hover:scale-125' onClick={handleUnitsChange}>°C</button>

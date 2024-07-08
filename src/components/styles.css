@@ -1,0 +1,24 @@
+.gradient-btn {
+    background: linear-gradient(to left, rgb(22, 97, 181), rgb(183, 75, 10));
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .gradient-btn:hover {
+    opacity: 0.8;
+  }
+
+  .gradient-text {
+    background: linear-gradient(to right, rgb(22, 97, 181), rgb(183, 75, 10));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
