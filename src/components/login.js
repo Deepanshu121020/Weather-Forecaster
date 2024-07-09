@@ -1,5 +1,6 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { auth } from "./firebase";
 import { toast } from "react-toastify";
 import SignInwithGoogle from "./signInWithGoogle";
@@ -9,6 +10,7 @@ import './styles.css'; // Import the custom CSS
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate(); // Initialize the navigate function
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,7 +19,7 @@ function Login() {
       const user = userCredential.user;
       if (user) {
         console.log("User logged in Successfully");
-        window.location.href = "/application";
+        navigate("/application"); // Navigate to the application page
         toast.success("User logged in Successfully", {
           position: "top-center",
         });
